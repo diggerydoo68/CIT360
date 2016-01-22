@@ -16,10 +16,7 @@ public class helloWorldApp extends JFrame {
 	JButton jbtHello4;
 
 	// declare buttonHandlers
-	helloButtonHandler1 helloHandler1;
-	helloButtonHandler2 helloHandler2;
-	helloButtonHandler3 helloHandler3;
-	helloButtonHandler4 helloHandler4;
+	helloButtonHandler helloHandler;
 
 	// *************************************
 	// GUI frame work for layout setup below
@@ -63,17 +60,11 @@ public class helloWorldApp extends JFrame {
 		p1.add(jbtHello4);
 
 		// create listener classes and associate with buttons
-		helloHandler1 = new helloButtonHandler1();
-		jbtHello1.addActionListener(helloHandler1);
-		
-		helloHandler2 = new helloButtonHandler2();
-		jbtHello2.addActionListener(helloHandler2);
-		
-		helloHandler3 = new helloButtonHandler3();
-		jbtHello3.addActionListener(helloHandler3);
-		
-		helloHandler4 = new helloButtonHandler4();
-		jbtHello4.addActionListener(helloHandler4);
+		helloHandler = new helloButtonHandler();
+		jbtHello1.addActionListener(helloHandler);
+		jbtHello2.addActionListener(helloHandler);
+		jbtHello3.addActionListener(helloHandler);
+		jbtHello4.addActionListener(helloHandler);
 	
 		// set visible
 		setVisible(true);
@@ -92,60 +83,41 @@ public class helloWorldApp extends JFrame {
 	// *************************************
 	//     Listener 1 for jbtHello1
 	// *************************************
-	class helloButtonHandler1 implements ActionListener {
-		private Component frame1;
+	class helloButtonHandler implements ActionListener {
+		private Component frame;
 
 		public void actionPerformed(ActionEvent e) {
 
-			//test message
-			JOptionPane.showMessageDialog(frame1,"Why hello there good sir.",
-			    "The World says...",JOptionPane.PLAIN_MESSAGE);
+			// Get button that was pressed
+			JButton pressed = (JButton) (e.getSource());
+
+		        // Reach into button and pull text
+			String text = pressed.getText();			
 			
-		}
-	}
-	
-	// *************************************
-	//     Listener 2 for jbtHello2
-	// *************************************
-	class helloButtonHandler2 implements ActionListener {
-		private Component frame2;
-
-		public void actionPerformed(ActionEvent e) {
-
-			//test message
-			JOptionPane.showMessageDialog(frame2,"Good weather bad weather it's all the same to me.",
-				 "The World says...",JOptionPane.PLAIN_MESSAGE);
-				
-		}
-	}
-	
-	// *************************************
-	//     Listener 3 for jbtHello3
-	// *************************************
-	class helloButtonHandler3 implements ActionListener {
-		private Component frame3;
-
-		public void actionPerformed(ActionEvent e) {
-
-			//test message
-			JOptionPane.showMessageDialog(frame3,"Mostly business as usual.",
+			if (text.equals("Hello World!"))
+			{
+				// Response 1
+				JOptionPane.showMessageDialog(frame,"Why hello there good sir.",
+				"The World says...",JOptionPane.PLAIN_MESSAGE);
+			}
+			else if (text.equals("Hows the weather?"))
+			{
+				// Response 2
+				JOptionPane.showMessageDialog(frame,"Good weather bad weather it's all the same to me.",
 				"The World says...",JOptionPane.PLAIN_MESSAGE);
 				
-		}
-	}
-		
-	// *************************************
-	//     Listener 4 for jbtHello4
-	// *************************************
-	class helloButtonHandler4 implements ActionListener {
-		private Component frame4;
-
-		public void actionPerformed(ActionEvent e) {
-
-			//test message
-			JOptionPane.showMessageDialog(frame4,"You take care as well.",
+			}else if (text.equals("Busy today?"))
+			{
+				// Response 3			
+				JOptionPane.showMessageDialog(frame,"Mostly business as usual.",
 				"The World says...",JOptionPane.PLAIN_MESSAGE);
-				
+			}
+			else
+			{
+				// Response 4
+				JOptionPane.showMessageDialog(frame,"You take care as well.",
+				"The World says...",JOptionPane.PLAIN_MESSAGE);
+			}
 		}
 	}
 }
