@@ -1,0 +1,151 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+/**
+ * Author: Kyle Stucki Date 1/21/2016 Program: HelloWorldApp
+ **/
+
+@SuppressWarnings("serial")
+public class helloWorldApp extends JFrame {
+
+	// declare buttons
+	JButton jbtHello1;
+	JButton jbtHello2;
+	JButton jbtHello3;
+	JButton jbtHello4;
+
+	// declare buttonHandlers
+	helloButtonHandler1 helloHandler1;
+	helloButtonHandler2 helloHandler2;
+	helloButtonHandler3 helloHandler3;
+	helloButtonHandler4 helloHandler4;
+
+	// *************************************
+	// GUI frame work for layout setup below
+	// *************************************
+
+	public helloWorldApp() {
+
+		// create jframe
+		JFrame f = new JFrame("Hello World App");
+		f.setLayout(new FlowLayout());
+
+		// create panel
+		JPanel p1 = new JPanel();
+		p1.setLayout(new GridLayout(2, 2));
+
+		// add panel to frame
+		add(p1);
+
+		// gui setup
+		setTitle("Hello World App");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(450, 300);
+		setLocationRelativeTo(null);
+
+		// create JButtons
+		jbtHello1 = new JButton("Hello World!");
+		jbtHello2 = new JButton("Hows the weather?");
+		jbtHello3 = new JButton("Busy today?");
+		jbtHello4 = new JButton("Take care friend.");
+
+		// set size and font for jbt's
+		jbtHello1.setFont(new Font("Arial", Font.PLAIN, 20));
+		jbtHello2.setFont(new Font("Arial", Font.PLAIN, 20));
+		jbtHello3.setFont(new Font("Arial", Font.PLAIN, 20));
+		jbtHello4.setFont(new Font("Arial", Font.PLAIN, 20));
+
+		// add elements to JFrame
+		p1.add(jbtHello1);
+		p1.add(jbtHello2);
+		p1.add(jbtHello3);
+		p1.add(jbtHello4);
+
+		// create listener classes and associate with buttons
+		helloHandler1 = new helloButtonHandler1();
+		jbtHello1.addActionListener(helloHandler1);
+		
+		helloHandler2 = new helloButtonHandler2();
+		jbtHello2.addActionListener(helloHandler2);
+		
+		helloHandler3 = new helloButtonHandler3();
+		jbtHello3.addActionListener(helloHandler3);
+		
+		helloHandler4 = new helloButtonHandler4();
+		jbtHello4.addActionListener(helloHandler4);
+	
+		// set visible
+		setVisible(true);
+
+	}
+
+	// ***************************
+	//        Main method
+	// ***************************
+	public static void main(String[] args) {
+
+	   new helloWorldApp();
+	}
+
+
+	// *************************************
+	//     Listener 1 for jbtHello1
+	// *************************************
+	class helloButtonHandler1 implements ActionListener {
+		private Component frame1;
+
+		public void actionPerformed(ActionEvent e) {
+
+			//test message
+			JOptionPane.showMessageDialog(frame1,"Why hello there good sir.",
+			    "The World says...",JOptionPane.PLAIN_MESSAGE);
+			
+		}
+	}
+	
+	// *************************************
+	//     Listener 2 for jbtHello2
+	// *************************************
+	class helloButtonHandler2 implements ActionListener {
+		private Component frame2;
+
+		public void actionPerformed(ActionEvent e) {
+
+			//test message
+			JOptionPane.showMessageDialog(frame2,"Good weather bad weather it's all the same to me.",
+				 "The World says...",JOptionPane.PLAIN_MESSAGE);
+				
+		}
+	}
+	
+	// *************************************
+	//     Listener 3 for jbtHello3
+	// *************************************
+	class helloButtonHandler3 implements ActionListener {
+		private Component frame3;
+
+		public void actionPerformed(ActionEvent e) {
+
+			//test message
+			JOptionPane.showMessageDialog(frame3,"Mostly business as usual.",
+				"The World says...",JOptionPane.PLAIN_MESSAGE);
+				
+		}
+	}
+		
+	// *************************************
+	//     Listener 4 for jbtHello4
+	// *************************************
+	class helloButtonHandler4 implements ActionListener {
+		private Component frame4;
+
+		public void actionPerformed(ActionEvent e) {
+
+			//test message
+			JOptionPane.showMessageDialog(frame4,"You take care as well.",
+				"The World says...",JOptionPane.PLAIN_MESSAGE);
+				
+		}
+	}
+}
