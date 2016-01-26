@@ -8,6 +8,7 @@ public class collection {
 		ArrayList<Integer> numbers = new ArrayList<Integer>();
 		
 		//adding
+		numbers.ensureCapacity(12); //determine size of list
 		numbers.add(10);
 		numbers.add(100);
 		numbers.add(40);
