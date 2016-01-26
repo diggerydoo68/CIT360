@@ -19,6 +19,20 @@ public class collection {
 		for(int i=0; i < numbers.size(); i++){
 			System.out.println(numbers.get(i));
 		}
+	public class collectiontwo{
+		public void main(String[] args){
+			ArrayList<String> hobbits = new ArrayList<String>();
+			
+			hobbits.add("Bilbo");
+			hobbits.add("Frodo");
+			hobbits.add("Sam");
+			hobbits.add("Merry");
+			hobbits.add("Pippin");
+			hobbits.add("Took");
+			hobbits.add("Olo");
+			hobbits.add("Brandybuck");
+	
+		}
 	}
 
 }
