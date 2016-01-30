@@ -1,0 +1,7 @@
+Hello Brother Tuckett, 
+This week I added a few more files to my repository. I included in the master branch a couple more files demonstrating my 
+knowledge of i/o sockets in java. I created a hobbit server that tells you hobbit names every time you prompt it to.  
+I was also able to take my understanding of collections to a new level when I implemented it in a simple app. The app lets you choose what 
+hobit name you would like to choose in a drop down box.  I created a colection of hobbit names that the app feeds off of. Feel free to take
+a look. The hobbit app is in a different branch that is public called: hobbit name app. I really dove in deep today with collcetions
+i/o sockets. 
