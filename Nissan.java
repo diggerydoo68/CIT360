@@ -1,3 +1,9 @@
+// Author Kyle Stucki
+// This program implements the use of 4 classes
+// Owner.java
+// Car.java
+// Ferrar.java
+// Nissan.java
 public class Nissan extends Car {
 	
 	protected int year;
