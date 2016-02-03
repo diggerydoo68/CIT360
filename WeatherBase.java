@@ -117,7 +117,7 @@ public class WeatherBase {
 		newTempList.add((float) 34.4);
 		newTempList.add((float) 27.2);
 		
-		// Show the list before a copy takes place. Make the copy. Then display
+		// Collections Example 9 - Show the list before a copy takes place. Make the copy. Then display
 		System.out.println("New temp list before copy: "+ newTempList);
 		Collections.copy(newTempList, tempList);
 		System.out.println("New temp list after copy: "+ newTempList + "\n");
