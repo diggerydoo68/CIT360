@@ -1,0 +1,168 @@
+//Singleton Pattern
+using System;
+
+class SingletonB
+{
+    public static readonly SingletonB _instance = new SingletonB();
+
+    public void Test()
+    {
+	// Code runs.
+	Console.WriteLine(true);
+    }
+
+    SingletonB()
+    {
+    }
+}
+
+class Program
+{
+    public static void Main()
+    {
+	SingletonB._instance.Test();
+    }
+}
+
+
+
+/*//Proxy Pattern
+
+using System;
+
+/// <summary>
+/// The 'Subject interface
+/// </summary>
+public interface IClient
+{
+ string GetData();
+}
+ 
+/// <summary>
+/// The 'RealSubject' class
+/// </summary>
+public class RealClient : IClient
+{
+ string Data;
+ public RealClient()
+ {
+ Console.WriteLine("Real Client: Initialized");
+ Data = "Dot Net Tricks";
+ }
+ 
+ public string GetData()
+ {
+ return Data;
+ }
+}
+ 
+/// <summary>
+/// The 'Proxy Object' class
+/// </summary>
+public class ProxyClient : IClient
+{
+ RealClient client = new RealClient();
+ public ProxyClient()
+ {
+ Console.WriteLine("ProxyClient: Initialized");
+ }
+ 
+ public string GetData()
+ {
+ return client.GetData();
+ }
+}
+ 
+/// <summary>
+/// Proxy Pattern Demo
+/// </summary>
+class Program
+{
+ static void Main(string[] args)
+ {
+ ProxyClient proxy = new ProxyClient();
+ Console.WriteLine("Data from Proxy Client = {0}", proxy.GetData());
+ 
+ Console.ReadKey();
+ }
+}
+*/
+
+//IVSR:Factory Pattern
+//Empty vocabulary of Actual object
+
+//Factory Pattern
+/*
+using System;
+
+class Program
+{
+    abstract class Position
+    {
+	public abstract string Title { get; }
+    }
+
+    class Manager : Position
+    {
+	public override string Title
+	{
+	    get
+	    {
+		return "Manager";
+	    }
+	}
+    }
+
+    class Clerk : Position
+    {
+	public override string Title
+	{
+	    get
+	    {
+		return "Clerk";
+	    }
+	}
+    }
+
+    class Programmer : Position
+    {
+	public override string Title
+	{
+	    get
+	    {
+		return "Programmer";
+	    }
+	}
+    }
+
+    static class Factory
+    {
+	/// <summary>
+	/// Decides which class to instantiate.
+	/// </summary>
+	public static Position Get(int id)
+	{
+	    switch (id)
+	    {
+		case 0:
+		    return new Manager();
+		case 1:
+		case 2:
+		    return new Clerk();
+		case 3:
+		default:
+		    return new Programmer();
+	    }
+	}
+    }
+
+    static void Main()
+    {
+	for (int i = 0; i <= 3; i++)
+	{
+	    var position = Factory.Get(i);
+	    Console.WriteLine("Where id = {0}, position = {1} ", i, position.Title);
+	}
+    }
+}
+*/
