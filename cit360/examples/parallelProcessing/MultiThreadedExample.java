@@ -1,6 +1,6 @@
 package cit360.examples.parallelProcessing;
 
-public class SimpleRunnableStarter {
+public class MultiThreadedExample {
 
     public static void main(String[] args) throws InterruptedException {
 
