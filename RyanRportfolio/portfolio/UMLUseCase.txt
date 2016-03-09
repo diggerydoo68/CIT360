@@ -1,0 +1,4 @@
+The use case diagram is used to capture customer requirments. 
+Luckily in this case I already know what the customer wants and what the shareholders want so I can immeadiatly 
+start diagramming the use case for the motivation app. This case diagram is also very simple because there will be only one customer 
+that will be using the app and the rest will be developers and database administrators.
