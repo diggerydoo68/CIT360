@@ -1,18 +1,20 @@
-public class Musician extends Bands{
-protected String description;
-	
-	Musician() {
-		
+public class Musician {
+	   private String rollNo;
+	   private String name;
+	   
+	   public String getRollNo() {
+	      return rollNo;
+	   }
+	   
+	   public void setRollNo(String rollNo) {
+	      this.rollNo = rollNo;
+	   }
+	   
+	   public String getName() {
+	      return name;
+	   }
+	   
+	   public void setName(String name) {
+	      this.name = name;
+	   }
 	}
-	
-	Musician(String Instrument, String Genre, String description) {
-		super(Instrument, Genre);
-		this.description = description;
-	}
-	
-	//to string is used to pull and print
-	public String toString() {
-		return " " + Instrument + ", " + Genre + ", " + description + " "; 
-	}
-
-}
