@@ -1,0 +1,5 @@
+This hibernate example is used to introduce and start hibernate on your computer.  BEFORE compiling this code the developer must first
+add the external required JAR files to their libraries. they must also configure the mapping file (hibernate.cfg.xml) to suite the needs
+of the machine and application or they will recieve a session factory error on their local server. Initially a relational database must 
+be completly set up BEFORE executing this code. The author of this repository also assumes that the developer testing this code has 
+already installed the latest version of Java and hibernate ORM. If not do that FIRST.
