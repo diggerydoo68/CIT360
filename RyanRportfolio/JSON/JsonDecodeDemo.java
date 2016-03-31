@@ -1,5 +1,3 @@
-package json;
-
 import org.json.simple.JSONObject;  //Running against to decode
 import org.json.simple.JSONArray;    //Running against to decode
 import org.json.simple.parser.ParseException;   //Running against to decode
