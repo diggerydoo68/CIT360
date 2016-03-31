@@ -1,5 +1,3 @@
-package url;
-
 //File Name : URLConnDemo.java
 
 import java.net.*;
