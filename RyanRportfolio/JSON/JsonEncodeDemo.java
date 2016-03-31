@@ -1,5 +1,3 @@
-package json;
-
 import org.json.simple.JSONObject;
 
 class JsonEncodeDemo {
